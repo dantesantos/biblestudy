@@ -1,4 +1,4 @@
-biblestudy.databasewindows.net
-BibleStudy
+biblecontent.database.windows.net
+BibleContent
 tesdba
 W*****2019
