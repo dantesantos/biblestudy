@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<object>
+@{
+    Layout = null;
+    List<BibleStudy.Models.VerseContent> objVerseCon = Model.ToList()[0] as List<BibleStudy.Models.VerseContent>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        <ul>
+            @foreach (var item in objVerseCon)
+            {
+                @*<a href="@Url.Action("ViewChapter", "Authors")" class="btn btn-primary btn-lg">@v.VerseContent1 &raquo;</a>*@
+                <li>@item.Verse</li>
+                
+            }
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+        <p>This is a test!!!</p>
+    </div>
+</body>
+</html>
+
+@*
+        @foreach (var t in Model)
+        {
+            <div>
+                <table class="table">
+                    @for (int j = 1; j <= t.VerseContent1.Length; j++)
+                    {
+                        if (t.ChapterID == i)
+                    }
+
+                    <tr>
+                        <td>
+                            <p>@t.VerseContent1</p>
+    <p>Linha 1 coluna 1</p>
+                    </td>
+    <td>
+        <p>@t.VerseContent1</p>
+        <p>Linha 1 coluna 2</p>
+    </td>
+                </tr>
+    <tr>
+        <td>
+            <p>@t.VerseContent1</p>
+            <p>Linha 2 coluna 1</p>
+        </td>
+        <td>
+            <p>@t.VerseContent1</p>
+            <p>Linha 2 coluna 2</p>
+        </td>
+    </tr>
+            </table>
+
+
+        </div>
+    }
+*@

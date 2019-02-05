@@ -3,24 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BibleStudy.Models;
 
 namespace BibleStudy.Controllers
 {
     public class HomeController : Controller
     {
+        DbBible db = new DbBible();
         public ActionResult Index()
         {
-            return View();
+            List<object> myModel = new List<object>();
+            myModel.Add(db.ChapterQties.ToList());
+            myModel.Add(db.VerseContents.ToList());
+            return View(myModel);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult Authors()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public ActionResult Contact()
+        public ActionResult Study()
         {
             ViewBag.Message = "Your contact page.";
 

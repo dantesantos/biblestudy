@@ -1,0 +1,54 @@
+﻿@model IEnumerable<object>
+
+@{
+    /**/
+    List<BibleStudy.Models.ChapterQty> objChapQty = Model.ToList()[0] as List<BibleStudy.Models.ChapterQty>;
+
+
+
+    ViewBag.Title = "John";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>John</h2>
+<p>@ViewBag.Message</p>
+
+<p><strong>Chapters:</strong></p>
+
+@foreach (var item in objChapQty)
+{
+    for (int i = 1; i <= item.Qty; i++)
+    {
+        if (item.AuthorName == @ViewBag.Title)
+        {
+            <a href="@Url.Action("ViewVerses", "Authors",new { ChapterAuthor = item.AuthorName + " " + i.ToString() })" class="btn btn-primary btn-lg">@i</a>
+        }
+    }
+}
+            
+
+
+
+@*@RenderPage("~/Views/Authors/BuildTable.cshtml") *@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*< a href = "https://asp.net" class="btn btn-primary btn-lg">@c.ChapID &raquo;</a>*@
+@*<a href = "@Url.Action("ViewChapter", "Authors")" class="btn btn-primary btn-lg">@c.ChapID &raquo;</a>*@
+
+@*<a href = "@Url.Action("ViewChapter", "Authors")" class="btn btn-primary btn-lg">@c.Qty &raquo;</a>*@
+@*<li>@Html.ActionLink(c.AuthorName, "ViewChapter", "Authors", new { ChapterAuthor = c.AuthorName
+    }, null)</li>*@

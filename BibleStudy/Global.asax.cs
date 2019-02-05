@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BibleStudy.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +18,13 @@ namespace BibleStudy
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // other code 
+            Database.SetInitializer<DbBible>(null);
+            // more code
         }
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Bible Study</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,13 +17,55 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Bible Study Guide", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            @* css related to the main page *@
+            <style>
+                *{
+                    margin:0;
+                    padding:0;
+                }
+                a {
+                    padding: 15px;
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                    color: #fff;
+                }
+                ul li ul li:hover a {
+                    background-color: rgba(128, 128, 128, 1.00);
+                    color: #fff;
+                }
+                ul {
+                    list-style: none;
+                    position: relative;
+                }
+                ul ul {
+                        position: absolute;
+                        visibility: hidden;
+                    }
+                ul li:hover ul {
+                        visibility: visible;
+                    }
+                ul li {
+                        background-color: black;
+                        color: #fff;
+                        float: left;
+                        width: 150px;
+                    }
+            </style>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Authors", "", "")
+                        <ul>                            
+                            <li>@Html.ActionLink("John", "John", "Authors")</li>
+                            <li>@Html.ActionLink("Mark", "Mark", "Authors")</li>
+                            <li>@Html.ActionLink("Matthew", "Matthew", "Authors")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("My Study", "Study", "Home")</li>
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -33,7 +75,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Dante Coelho Cerqueira Santos - 200389752 - Server-Side Scripting ASP.NET - COMP2084</p>
         </footer>
     </div>
 

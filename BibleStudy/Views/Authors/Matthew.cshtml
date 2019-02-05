@@ -1,0 +1,27 @@
+﻿@model IEnumerable<object>
+
+@*@model IEnumerable<BibleStudy.Models.ChapterQty>*@
+
+@{
+    /**/
+    List<BibleStudy.Models.ChapterQty> objChapQty = Model.ToList()[0] as List<BibleStudy.Models.ChapterQty>;
+    ViewBag.Title = "Matthew";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Matthew</h2>
+<p>@ViewBag.Message</p>
+
+<p><strong>Chapters:</strong></p>
+
+@foreach (var item in objChapQty)
+{
+    for (int i = 1; i <= item.Qty; i++)
+    {
+        if (item.AuthorName == @ViewBag.Title)
+        {
+            <a href="@Url.Action("ViewVerses", "Authors",new { ChapterAuthor = item.AuthorName + " " + i.ToString() })" class="btn btn-primary btn-lg">@i</a>
+        }
+    }
+}
+

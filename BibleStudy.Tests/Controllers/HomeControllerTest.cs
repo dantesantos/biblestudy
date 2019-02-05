@@ -25,27 +25,27 @@ namespace BibleStudy.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
+        //[TestMethod]
+        //public void Auhtors()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
+
+        //    // Act
+        //    ViewResult result = controller.Authors() as ViewResult;
+
+        //    // Assert
+        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        //}
+
         [TestMethod]
-        public void About()
+        public void Studyt()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
-
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Study() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
