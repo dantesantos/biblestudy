@@ -1,4 +1,4 @@
-# biblestudy
+# The Bible Study
 <p>The purpose of this site is offer to those people that want to go deep into the bible verses and know more about it.</p>
 <p>Although I could go further with some new features that I learned I couldn't finish the page due to persistent errors.</p>
 <p></p>
