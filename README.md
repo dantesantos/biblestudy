@@ -4,6 +4,8 @@
 <p></p>
 <p>There is a problem between what the files generates and what the Web App created on Azure shows. On the Web App, for example,
 the images and the buttons that leads you to the chapters don't appear.</p>
+<a href="https://biblestudy.azurewebsites.net/">https://biblestudy.azurewebsites.net/</a>
+<br/>
 <p>Some features learned:</p>
 <ul>
   <li>List<object> myModel = new List<object>();
